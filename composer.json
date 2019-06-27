@@ -1,0 +1,24 @@
+{
+    "name": "teka/faker-team",
+    "description": "Faker provider for generating fake Team Names.",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "Marcelo Oliveira",
+            "email": "marcelotk_15@hotmail.com"
+        }
+    ],
+    "keywords": ["faker", "provider", "team"],
+    "require": {
+        "fzaninotto/faker": "^1.8.*",
+        "php": "^5.3.3 || ^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Faker\\Provider\\": "src/"
+        }
+    }
+}
