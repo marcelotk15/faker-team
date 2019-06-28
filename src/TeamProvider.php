@@ -4,19 +4,19 @@ namespace Faker\Provider;
 
 class TeamProvider extends Base
 {
-    protected static $animals = array("Hawks", "Honeybadgers", "Mantis Shrimps", "Anteaters", "Panthers", "Wolves", "Lions", "Eagles", "Wolverines", "Gators", "Scorpions", "Monkeys", "Weasels");
+    protected static $animals = ['Hawks', 'Honeybadgers', 'Mantis Shrimps', 'Anteaters', 'Panthers', 'Wolves', 'Lions', 'Eagles', 'Wolverines', 'Gators', 'Scorpions', 'Monkeys', 'Weasels'];
 
-    protected static $colors = array("Red", "Black", "Silver", "Magenta", "Green", "Blue", "White", "Fuschia");
+    protected static $colors = ['Red', 'Black', 'Silver', 'Magenta', 'Green', 'Blue', 'White', 'Fuschia'];
 
-    protected static $adjectives = array("Angry", "Awesome", "Mighty", "Atomic", "Screaming", "Scorching", "Slick", "Big", "Giant", "Speedy", "Red Hot", "Lil'", "Rockin'", "Extreme");
+    protected static $adjectives = ['Angry', 'Awesome', 'Mighty', 'Atomic', 'Screaming', 'Scorching', 'Slick', 'Big', 'Giant', 'Speedy', 'Red Hot', "Lil'", "Rockin'", 'Extreme'];
 
-    protected static $disasters = array("Tornados", "Hurricanes", "Lightning", "Thunder", "Backdraft", "Fire", "Firestorms", "Flames");
+    protected static $disasters = ['Tornados', 'Hurricanes', 'Lightning', 'Thunder', 'Backdraft', 'Fire', 'Firestorms', 'Flames'];
 
-    protected static $weapons = array("Bazookas", "Machetes", "Machine Guns", "Daggers", "Rockets");
+    protected static $weapons = ['Bazookas', 'Machetes', 'Machine Guns', 'Daggers', 'Rockets'];
 
-    protected static $others = array("Slayers", "Bombers", "Demons", "Angels", "X-treme", "Maniacs", "Annihilators", "Rage", "Bruisers");
+    protected static $others = ['Slayers', 'Bombers', 'Demons', 'Angels', 'X-treme', 'Maniacs', 'Annihilators', 'Rage', 'Bruisers'];
 
-    protected static $namesFormats = array(
+    protected static $namesFormats = [
         '{{color}} {{animal}}',
         '{{adjective}} {{animal}}',
         '{{adjective}} {{color}} {{animal}}',
@@ -26,8 +26,8 @@ class TeamProvider extends Base
         '{{color}} {{disaster}}',
         '{{adjective}} {{disaster}}',
         '{{color}} {{weapon}}',
-        '{{adjective}} {{weapon}}'
-    );
+        '{{adjective}} {{weapon}}',
+    ];
 
     public static function animal()
     {
@@ -66,18 +66,18 @@ class TeamProvider extends Base
 
     public function abreviation($name)
     {
-        $name = explode(" ", $name);
+        $name = explode(' ', $name);
 
         switch (count($name)) {
             case '2':
-                return strtoupper(substr($name[0], 0, 2). substr($name[1], 0, 1));
+                return strtoupper(substr($name[0], 0, 2).substr($name[1], 0, 1));
                 break;
 
             case '3':
-                return strtoupper(substr($name[0], 0, 1). substr($name[1], 0, 1). substr($name[2], 0, 1));
-            
+                return strtoupper(substr($name[0], 0, 1).substr($name[1], 0, 1).substr($name[2], 0, 1));
+
             default:
-                return "ABC";
+                return 'ABC';
                 break;
         }
     }
