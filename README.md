@@ -20,7 +20,7 @@ $faker->addProvider(new Faker\Provider\TeamProvider($faker));
 $faker->teamName();
 // Screaming Silver Annihilators
 
-$faker->abreviation($fake->teamName())
+$faker->abbreviation($fake->teamName())
 // SSA
 ```
 
